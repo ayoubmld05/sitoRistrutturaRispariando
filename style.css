@@ -1,0 +1,647 @@
+body {
+    font-family: 'DM Serif Display', serif;
+  }
+  
+  /* Esempio: applicarlo solo ai titoli */
+  h1, h2, h3,p {
+    font-family: 'DM Serif Display', serif;
+  }
+  
+
+body{
+    background-color: rgba(9, 20, 42, 1);
+    font-family: sans-serif;
+    height: 100%;
+    /* AGGIUNGI QUESTA RIGA SALVAVITA: */
+    overflow-x: hidden;
+}
+
+.logo{
+    width: 200px;
+}
+
+.testata{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu{
+    display: flex;
+    gap: 30px;
+}
+
+.bottone_menu{
+    background-color: rgba(9, 36, 94, 1);
+    color: rgba(245, 245, 220, 1);
+    border-radius: 20px;
+    font-size: 12px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.bloccoIniziale{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.testoEffetto{
+    color: rgba(245, 245, 220, 1);
+    font-size: 100px;
+    margin: 0;
+    line-height: 1.1;
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+.testo-evidenziato{
+    color: rgba(225, 173, 1, 1);
+}
+
+.riceviPreventivoGratuito {
+    background-color: rgba(9, 36, 94, 1);
+    color: rgba(245, 245, 220, 1);
+    border-radius: 40px;
+    padding: 20px 40px; 
+    font-size: 15px;
+    text-align: left;
+    align-self: flex-end; 
+    margin-right: 80px; 
+    cursor: pointer;
+}
+
+.secondoBlocco {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 150px;
+}
+
+.riga-elenco {
+    display: flex;
+    align-items: center; 
+    gap: 20px; 
+}
+
+.cerchietto {
+    width: 30px; 
+    height: 30px; 
+    background-color: rgba(225, 173, 1, 1); 
+    border-radius: 50%; 
+    flex-shrink: 0;
+}
+
+.testo-elenco {
+    color: rgba(245, 245, 220, 1);
+    font-size: 20px;
+    margin: 0;
+}
+
+.terzoBlocco {
+    margin-top: 200px;
+    background-color: rgba(194, 178, 128, 1);
+    width: 1000px;
+    height: 500px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+}
+
+.testo-lavori {
+    color: rgba(245, 245, 220, 1);
+    font-size: 50px;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.testo-evidenziato-blu {
+    color: rgba(9, 36, 94, 1);
+}
+
+.foto {
+    position: absolute;
+    box-shadow: 15px 15px 0px rgba(194, 178, 128, 1);
+}
+
+.foto1 {
+    width: 320px;
+    height: 200px;
+    object-fit: cover;
+    top: -50px;
+    left: 650px;
+    z-index: 1;
+}
+
+.foto2 {
+    width: 380px;
+    height: 200px;
+    object-fit: cover;
+    top: 60px;
+    left: 900px;
+    z-index: 2;
+}
+
+.foto3 {
+    width: 200px;
+    height: 350px;
+    object-fit: cover;
+    bottom: -80px;
+    left: 720px;
+    z-index: 3;
+}
+
+.foto4 {
+    width: 320px;
+    height: 200px;
+    object-fit: cover;
+    bottom: 30px;
+    right: -300px;
+    z-index: 4;
+}
+
+.quartoBlocco{
+    margin-top: 700px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 100px;
+}   
+
+.testo-scelta{
+    color: rgba(245, 245, 220, 1);
+    font-size: 50px;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.contenitore{
+    background-color: rgba(245, 245, 220, 1);
+    width: 300px;
+    height: 400px;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.titoloContenitore{ 
+    font-size: 20px;
+    color: rgba(9, 36, 94, 1);
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    margin-top: 20px;
+}
+
+.genitoreContenitori{
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+}
+
+.testoContenitore{
+    color: rgba(9, 36, 94, 1);
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.5;
+    margin: 0
+}
+
+.quintoBlocco{
+    display: flex;
+    margin-top: 300px;
+    justify-content: center;
+}
+
+.testo-sollecito {
+    color: rgba(245, 245, 220, 1);
+    font-size: 50px;
+    margin: 0;
+    line-height: 1.3;
+    margin-bottom: 300px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(9, 36, 94, 1);
+    padding: 100px 80px; 
+}
+
+.footer-sinistra {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    max-width: 800px;
+}
+
+.testoFinale {
+    font-size: 35px;
+    color: rgba(245, 245, 220, 1);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.contenitoreGenitoreLoghi {
+    display: flex;
+    gap: 30px;
+}
+
+.contenitoreLoghi {
+    background-color: rgba(212, 175, 55, 1); 
+    width: 70px;
+    height: 70px;
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logo-social {
+    width: 35px;
+    height: auto;
+}
+
+.chiama {
+    background-color: rgba(9, 20, 42, 1);
+    color: rgba(245, 245, 220, 1);
+    font-size: 25px;
+    font-weight: bold;
+    padding: 20px 50px; 
+    border-radius: 40px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.chiama:hover {
+    transform: scale(1.05);
+}
+
+
+
+/* 1. IL MENU: Si solleva e cambia colore */
+.bottone_menu {
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+.bottone_menu:hover {
+    transform: translateY(-5px); /* Va verso l'alto */
+    background-color: rgba(212, 175, 55, 1); /* Diventa oro */
+    color: rgba(9, 20, 42, 1); /* Testo scuro */
+}
+
+/* 2. LE CARTE (I Contenitori): Effetto levitazione 3D */
+.contenitore {
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s;
+    /* Spostiamo qui il border-radius per pulizia */
+    border-radius: 40px; 
+}
+.contenitore:hover {
+    transform: translateY(-20px); /* Si solleva molto */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); /* Crea un'ombra scura sotto, dando l'illusione del 3D */
+}
+
+/* 3. LE FOTO: Si ingrandiscono e si raddrizzano leggermente */
+.foto {
+    transition: transform 0.4s ease, z-index 0s;
+    cursor: pointer; /* Fa capire che sono cliccabili */
+}
+.foto:hover {
+    transform: scale(1.1) translateY(-10px); /* Si ingrandisce del 10% e sale */
+    z-index: 10; /* Assicura che la foto toccata venga sempre in primo piano rispetto alle altre! */
+}
+
+/* 4. I CERCHIETTI: Pulsano */
+.cerchietto {
+    transition: transform 0.3s ease;
+}
+.riga-elenco:hover .cerchietto {
+    transform: scale(1.3); /* Quando passi col mouse sulla riga, il cerchio si ingrandisce */
+}
+
+
+
+
+
+
+
+
+
+
+/* IL BACKGROUND SCURO DELLA GALLERIA */
+.lightbox {
+    position: fixed; /* Si attacca allo schermo, ignorando lo scroll */
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(9, 20, 42, 0.95); /* Scuro quasi solido */
+    z-index: 9999; /* Sta sopra a TUTTO il resto del sito */
+    display: none; /* Inizialmente è spento */
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+/* LA FOTO DENTRO LA GALLERIA */
+#immagine-ingrandita {
+    max-width: 80%;
+    max-height: 80vh;
+    border-radius: 10px;
+    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+    transition: opacity 0.3s;
+}
+
+/* BOTTONI DI CONTROLLO */
+.chiudi-galleria {
+    position: absolute;
+    top: 30px; right: 50px;
+    color: white; font-size: 50px; cursor: pointer;
+}
+.freccia {
+    color: white; font-size: 60px; cursor: pointer;
+    padding: 20px; user-select: none;
+}
+.freccia:hover { color: rgba(212, 175, 55, 1); }
+
+
+
+
+
+
+
+
+/* IL BACKGROUND SCURO DELLA GALLERIA */
+.lightbox {
+    position: fixed; /* Si attacca allo schermo, ignorando lo scroll */
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(9, 20, 42, 0.95); /* Scuro quasi solido */
+    z-index: 9999; /* Sta sopra a TUTTO il resto del sito */
+    display: none; /* Inizialmente è spento */
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+/* LA FOTO DENTRO LA GALLERIA */
+#immagine-ingrandita {
+    max-width: 80%;
+    max-height: 80vh;
+    border-radius: 10px;
+    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+    transition: opacity 0.3s;
+}
+
+/* BOTTONI DI CONTROLLO */
+.chiudi-galleria {
+    position: absolute;
+    top: 30px; right: 50px;
+    color: white; font-size: 50px; cursor: pointer;
+}
+.freccia {
+    color: white; font-size: 60px; cursor: pointer;
+    padding: 20px; user-select: none;
+}
+.freccia:hover { color: rgba(212, 175, 55, 1); }
+
+
+
+
+
+
+/* ANIMAZIONI ELENCO*/
+.riga-elenco {
+    display: flex;
+    align-items: center; 
+    gap: 20px; 
+    /* Prepariamo la riga per il movimento orizzontale */
+    transition: transform 0.3s ease; 
+}
+
+/* Quando il mouse passa sopra l'intera riga... */
+.riga-elenco:hover {
+    transform: translateX(15px); /* Tutta la riga scivola a destra di 15 pixel! */
+}
+
+/* ...e allo stesso tempo il cerchietto si ingrandisce! */
+.riga-elenco:hover .cerchietto {
+    transform: scale(1.3);
+    background-color: rgba(245, 245, 220, 1); /* Opzionale: il cerchio cambia colore */
+}
+
+/* IL MOTORE DELL'ANIMAZIONE PER TUTTI I BOTTONI */
+.bottone_menu,
+.riceviPreventivoGratuito,
+.chiama {
+    /* Diciamo a tutti i bottoni di usare il "rimbalzo" (cubic-bezier) per ogni trasformazione */
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+}
+
+/* L'EFFETTO QUANDO PASSI IL MOUSE SU QUALSIASI BOTTONE */
+.bottone_menu:hover,
+.riceviPreventivoGratuito:hover,
+.chiama:hover {
+    transform: translateY(-5px) scale(1.05); /* Si sollevano e si ingrandiscono del 5% */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Proiettano un'ombra profonda */
+}
+
+/* Tocco di classe extra per i bottoni del menu in alto */
+.bottone_menu:hover {
+    background-color: rgba(212, 175, 55, 1); /* Diventano oro */
+    color: rgba(9, 20, 42, 1); /* Testo blu scuro per contrasto */
+}
+
+
+
+
+
+
+
+/* =========================================
+   IL MOTORE DELLE ANIMAZIONI ALLO SCROLL
+========================================= */
+
+/* 1. GLI STATI DI PARTENZA (Invisibili) */
+.nascosto-basso {
+    opacity: 0;
+    transform: translateY(80px); /* Viene dal basso verso l'alto */
+    transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.nascosto-sinistra {
+    opacity: 0;
+    transform: translateX(-100px); /* Viene da sinistra verso destra */
+    transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.nascosto-destra {
+    opacity: 0;
+    transform: translateX(100px); /* Viene da destra verso sinistra */
+    transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* 2. LO STATO DI ARRIVO (Magia! Questa classe viene messa dal Javascript) */
+.mostra {
+    opacity: 1;
+    transform: translate(0, 0); /* Torna esattamente al punto 0 (la sua posizione vera) */
+}
+
+/* 3. I RITARDI (IL SEGRETO PER L'EFFETTO A CASCATA) */
+/* Se a un elemento diamo anche questa classe, aspetterà una frazione di secondo prima di partire */
+.ritardo-1 { transition-delay: 0.2s; }
+.ritardo-2 { transition-delay: 0.4s; }
+.ritardo-3 { transition-delay: 0.6s; }
+.ritardo-4 { transition-delay: 0.8s; }
+
+
+
+/* LA SCATOLA INCOLLATA ALLO SCHERMO */
+.promo-box {
+    position: fixed; /* Il trucco magico: lo incolla alla finestra del browser! */
+    bottom: 30px; /* Distanza dal fondo dello schermo */
+    right: 30px; /* Distanza dal lato destro */
+    
+    background-color: rgba(225, 173, 1, 1); /* Il tuo colore Oro */
+    color: rgba(9, 20, 42, 1); /* Testo blu scuro per contrasto */
+    
+    width: 280px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6); /* Ombra molto marcata */
+    z-index: 9999; /* Lo mettiamo sopra a QUALSIASI altra cosa del sito */
+    
+    /* Eseguiamo due animazioni: una dura 0.8s, l'altra è infinita */
+    animation: ScivolaDaDestra 0.8s ease-out forwards, PulsaLeggermente 2s infinite alternate;
+}
+
+/* TESTI DENTRO LA PROMO */
+.titolo-promo {
+    font-weight: bold;
+    font-size: 22px;
+    margin: 0 0 10px 0;
+}
+
+.testo-promo {
+    font-size: 15px;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* LA "X" PER CHIUDERE */
+.chiudi-promo {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.chiudi-promo:hover {
+    color: white; /* Diventa bianco se ci passi sopra */
+}
+
+/* LE ANIMAZIONI (I KEYFRAMES) */
+@keyframes ScivolaDaDestra {
+    0% { transform: translateX(400px); opacity: 0; } /* Parte fuori dallo schermo a destra */
+    100% { transform: translateX(0); opacity: 1; } /* Arriva alla sua posizione fissa */
+}
+
+@keyframes PulsaLeggermente {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.02); } /* Si ingrandisce appena appena, attirando l'occhio */
+}
+
+/* MEDIA QUERY PER SMARTPHONE (Per non coprire tutto lo schermo) */
+@media (max-width: 768px) {
+    .promo-box {
+        width: calc(100% - 40px); /* Prende tutta la larghezza meno un po' di margine */
+        bottom: 20px;
+        right: 20px;
+        left: 20px;
+    }
+}
+
+
+
+
+
+/*RULLINO */
+/* IL WRAPPER CHE CONTIENE BINARIO E FRECCE */
+.rullino-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1100px; /* Non lo fa allargare all'infinito */
+}
+
+/* IL BINARIO CHE SCORRE (Sostituisce il vecchio .genitoreContenitori) */
+.genitoreContenitori {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    
+    /* REGOLE DEL RULLINO */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    
+    /* LA MATEMATICA: 980px per 3 carte + 20px di margine laterale per non tagliare le ombre */
+    max-width: 1000px; 
+    padding: 20px 10px; 
+    
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+}
+
+.genitoreContenitori::-webkit-scrollbar {
+    display: none; /* Nasconde la scrollbar su Chrome/Safari */
+}
+
+/* AGGIUNTA ALLA TUA CLASSE .contenitore ESISTENTE */
+.contenitore {
+    background-color: rgba(245, 245, 220, 1);
+    width: 290px;
+    height: 400px;
+    border-radius: 40px; /* Portato a 40px per replicare il tuo design curvo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    
+    /* REGOLE FONDAMENTALI PER IL RULLINO */
+    flex-shrink: 0; /* Impedisce alle carte di schiacciarsi */
+    scroll-snap-align: start; /* Calamita la carta all'inizio, molto più preciso del center! */
+    
+    /* L'animazione 3D che avevamo creato */
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s;
+}
+
+/* LE FRECCE DEL RULLINO */
+.freccia-rullino {
+    background-color: rgba(225, 173, 1, 1);
+    color: rgba(9, 20, 42, 1);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0; /* Impedisce che le frecce si schiaccino */
+    transition: transform 0.2s, background-color 0.2s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.freccia-rullino:hover {
+    transform: scale(1.1);
+    background-color: rgba(245, 245, 220, 1);
+}
