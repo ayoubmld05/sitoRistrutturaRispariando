@@ -645,3 +645,122 @@ body{
     transform: scale(1.1);
     background-color: rgba(245, 245, 220, 1);
 }
+
+/* =========================================================
+   MEDIA QUERIES: LA MAGIA DEL RESPONSIVE DESIGN
+========================================================= */
+
+/* 1. TABLET E SCHERMI MEDI (Sotto i 1024px) */
+@media (max-width: 1024px) {
+    .terzoBlocco {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        padding: 50px 20px;
+    }
+
+    .foto {
+        position: static; /* Spegne il volo libero! */
+        width: 100%;
+        height: auto;
+        margin-bottom: 30px;
+        box-shadow: 10px 10px 0px rgba(194, 178, 128, 1);
+    }
+    
+    .foto1, .foto2, .foto3, .foto4 {
+        top: auto; left: auto; bottom: auto; right: auto;
+    }
+}
+
+/* 2. SMARTPHONE (Sotto i 768px) - IL VERO CAMBIAMENTO */
+@media (max-width: 768px) {
+    
+    /* NAVBAR */
+    .testata {
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* PRIMO BLOCCO */
+    .testoEffetto {
+        font-size: 45px; /* Molto più piccolo per il telefono */
+        margin-left: 0;
+        text-align: center;
+    }
+    
+    .riceviPreventivoGratuito {
+        align-self: center;
+        margin-right: 0;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    /* SECONDO BLOCCO */
+    .secondoBlocco {
+        margin-top: 100px;
+        padding: 0 20px;
+    }
+    
+    .testo-elenco { font-size: 16px; }
+
+    /* QUARTO BLOCCO (Il Rullino) */
+    .quartoBlocco {
+        margin-top: 150px;
+        gap: 50px;
+    }
+
+    .testo-scelta {
+        font-size: 35px;
+        text-align: center;
+    }
+    
+    /* Su cellulare nascondiamo le frecce gialle, si scorre col dito! */
+    .freccia-rullino { display: none; }
+
+    /* QUINTO BLOCCO */
+    .quintoBlocco { margin-top: 150px; }
+    
+    .testo-sollecito {
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 100px;
+        padding: 0 20px;
+    }
+
+    /* FOOTER */
+    .footer {
+        flex-direction: column;
+        padding: 60px 20px;
+        gap: 50px;
+        text-align: center;
+    }
+
+    .footer-sinistra {
+        gap: 40px;
+        align-items: center;
+    }
+
+    .testoFinale {
+        font-size: 24px;
+        margin-left: 0;
+    }
+    
+    .chiama {
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    /* POPUP PROMOZIONALE */
+    .promo-box {
+        width: calc(100% - 40px);
+        bottom: 20px;
+        right: 20px;
+        left: 20px;
+    }
+}
