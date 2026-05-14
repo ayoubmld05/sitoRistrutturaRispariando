@@ -645,9 +645,8 @@ body{
     transform: scale(1.1);
     background-color: rgba(245, 245, 220, 1);
 }
-
 /* =========================================================
-   MEDIA QUERIES: LA MAGIA DEL RESPONSIVE DESIGN
+   MEDIA QUERIES: LA MAGIA DEL RESPONSIVE DESIGN (AGGIORNATO)
 ========================================================= */
 
 /* 1. TABLET E SCHERMI MEDI (Sotto i 1024px) */
@@ -659,22 +658,25 @@ body{
         padding: 50px 20px;
     }
 
+    /* Le maniere forti: !important annulla ogni altra regola precedente */
     .foto {
-        position: static; /* Spegne il volo libero! */
-        width: 100%;
-        height: auto;
-        margin-bottom: 30px;
-        box-shadow: 10px 10px 0px rgba(194, 178, 128, 1);
-    }
-    
-    .foto1, .foto2, .foto3, .foto4 {
-        top: auto; left: auto; bottom: auto; right: auto;
+        position: static !important; 
+        display: block !important;
+        width: 100% !important; 
+        height: auto !important;
+        margin: 0 auto 30px auto !important; 
+        box-shadow: 10px 10px 0px rgba(194, 178, 128, 1) !important;
     }
 }
 
 /* 2. SMARTPHONE (Sotto i 768px) - IL VERO CAMBIAMENTO */
 @media (max-width: 768px) {
     
+    /* SPEGNIAMO GLI "A CAPO" CHE ROMPONO IL TESTO SU TELEFONO! */
+    .a-capo-pc {
+        display: none;
+    }
+
     /* NAVBAR */
     .testata {
         flex-direction: column;
@@ -685,13 +687,16 @@ body{
     .menu {
         flex-wrap: wrap;
         justify-content: center;
+        gap: 15px;
     }
 
     /* PRIMO BLOCCO */
     .testoEffetto {
-        font-size: 45px; /* Molto più piccolo per il telefono */
+        font-size: 40px; /* Grandezza perfetta per cellulare */
         margin-left: 0;
-        text-align: center;
+        margin-top: 10px;
+        text-align: center; /* Centrato è più bello su mobile */
+        line-height: 1.2;
     }
     
     .riceviPreventivoGratuito {
@@ -699,20 +704,21 @@ body{
         margin-right: 0;
         text-align: center;
         font-size: 20px;
+        padding: 15px 30px; /* Rimpicciolito un po' il rettangolo */
     }
 
     /* SECONDO BLOCCO */
     .secondoBlocco {
-        margin-top: 100px;
-        padding: 0 20px;
+        margin-top: 80px;
+        padding: 0 15px;
     }
     
     .testo-elenco { font-size: 16px; }
 
     /* QUARTO BLOCCO (Il Rullino) */
     .quartoBlocco {
-        margin-top: 150px;
-        gap: 50px;
+        margin-top: 100px;
+        gap: 30px;
     }
 
     .testo-scelta {
@@ -720,40 +726,40 @@ body{
         text-align: center;
     }
     
-    /* Su cellulare nascondiamo le frecce gialle, si scorre col dito! */
-    .freccia-rullino { display: none; }
+    .freccia-rullino { display: none !important; } /* Via le frecce */
 
     /* QUINTO BLOCCO */
-    .quintoBlocco { margin-top: 150px; }
+    .quintoBlocco { margin-top: 100px; }
     
     .testo-sollecito {
         font-size: 30px;
         text-align: center;
-        margin-bottom: 100px;
+        margin-bottom: 80px;
         padding: 0 20px;
     }
 
     /* FOOTER */
     .footer {
         flex-direction: column;
-        padding: 60px 20px;
-        gap: 50px;
+        padding: 50px 20px;
+        gap: 40px;
         text-align: center;
     }
 
     .footer-sinistra {
-        gap: 40px;
+        gap: 30px;
         align-items: center;
     }
 
     .testoFinale {
-        font-size: 24px;
+        font-size: 20px;
         margin-left: 0;
     }
     
     .chiama {
         width: 100%;
-        padding: 20px 0;
+        padding: 15px 0;
+        font-size: 20px;
     }
 
     /* POPUP PROMOZIONALE */
