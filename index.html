@@ -27,9 +27,12 @@
             .riceviPreventivoGratuito { align-self: center !important; margin-right: 0 !important; text-align: center; font-size: 20px; padding: 15px 30px; }
             .secondoBlocco { margin-top: 80px; padding: 0 15px; }
             .testo-elenco { font-size: 16px; }
-            .quartoBlocco { margin-top: 100px; gap: 30px; }
-            .testo-scelta { font-size: 35px; text-align: center; }
-            .freccia-rullino { display: none !important; }
+            .nuovoQuartoBlocco { padding: 0 20px; margin-top: 100px; }
+            .testo-scelta { text-align: center; font-size: 35px; margin-bottom: 30px; }
+            .slide-ragione { flex-direction: column; gap: 30px; }
+            .box-testo-ragione { width: 100%; padding: 40px 30px; box-sizing: border-box; }
+            .box-foto-ragione { width: 100%; height: 250px; }
+            .controlli-slider { gap: 20px; margin-top: 40px; }
             .quintoBlocco { margin-top: 100px; }
             .testo-sollecito { font-size: 30px; text-align: center; margin-bottom: 80px; padding: 0 20px; }
             .footer { flex-direction: column; padding: 50px 20px; gap: 40px; text-align: center; box-sizing: border-box; }
@@ -104,29 +107,68 @@
             <img src="immagini/foto3.jpeg" class="foto foto4 nascosto-basso ritardo-4">
         </div>
 
-        <div class="quartoBlocco">
-            <p class="testo-scelta nascosto-basso">Perchè <span class="testo-evidenziato">sceglierci</span></p>
-            <div class="rullino-wrapper nascosto-basso ritardo-1">
-                <button class="freccia-rullino sx" id="rullino-sx">&#10094;</button>
-                <div class="genitoreContenitori" id="binario-carte">
-                    <div class="contenitore">
-                        <p class="titoloContenitore">Maestri del Cartongesso</p>
-                        <p class="testoContenitore">Non ci limitiamo a montare pannelli. Da 30 anni plasmiamo il cartongesso per creare soluzioni su misura: librerie, controsoffitti di design, isolamenti acustici perfetti, cabine armadio o pareti curve. Qualsiasi cosa tu riesca a immaginare, noi abbiamo l'esperienza tecnica per realizzarla.</p>
+        <div class="nuovoQuartoBlocco">
+            <p class="testo-scelta nascosto-basso">Perchè <span class="testo-evidenziato">sceglierci?</span></p>
+
+            <div class="slider-ragioni nascosto-basso ritardo-1">
+                
+                <div class="slide-ragione attiva">
+                    <div class="box-testo-ragione">
+                        <p class="titolo-ragione">Maestri del Cartongesso</p>
+                        <p class="descrizione-ragione">Non ci limitiamo a montare pannelli. Da 30 anni plasmiamo il cartongesso per creare soluzioni su misura: librerie, controsoffitti di design, isolamenti acustici perfetti, cabine armadio o pareti curve. Qualsiasi cosa tu riesca a immaginare, noi abbiamo l'esperienza tecnica per realizzarla.</p>
                     </div>
-                    <div class="contenitore">
-                        <p class="titoloContenitore">Zero Stress: Un Unico Referente</p>
-                        <p class="testoContenitore">Dimentica l'incubo di dover rincorrere l'idraulico, poi l'elettricista e poi il muratore. Abbiamo un team interno di geometri e architetti per la progettazione tecnica, e da decenni collaboriamo solo con una rete selezionata e fidata di professionisti di ogni settore.</p>
-                    </div>
-                    <div class="contenitore">
-                        <p class="titoloContenitore">Da zero alle chiavi in mano</p>
-                        <p class="testoContenitore">La nostra rete ci permette di prendere in carico una casa da demolire e consegnartela pronta da abitare. Progettazione, pratiche, impianti e finiture: un flusso di lavoro testato in decenni di attività per garantirti tempi certi e zero brutte sorprese sul preventivo.</p>
-                    </div>
-                    <div class="contenitore">
-                        <p class="titoloContenitore">Garanzie e Sicurezza</p>
-                        <p class="testoContenitore">Garantiamo la massima sicurezza in ogni fase del cantiere e un'assistenza continua. Siamo sempre al tuo fianco per qualsiasi evenienza, assicurandoti disponibilità assoluta e interventi tempestivi anche a lavori ultimati. La tua tranquillità è la nostra priorità.</p>
+                    <div class="box-foto-ragione">
+                        <img src="immagini/foto.jpg" alt="Cartongesso">
                     </div>
                 </div>
-                <button class="freccia-rullino dx" id="rullino-dx">&#10095;</button>
+
+                <div class="slide-ragione">
+                    <div class="box-testo-ragione">
+                        <p class="titolo-ragione">Zero Stress: Un Unico Referente</p>
+                        <p class="descrizione-ragione">Dimentica l'incubo di dover rincorrere l'idraulico, poi l'elettricista e poi il muratore. Abbiamo un team interno di geometri e architetti per la progettazione tecnica, e da decenni collaboriamo solo con una rete selezionata e fidata di professionisti di ogni settore.</p>
+                    </div>
+                    <div class="box-foto-ragione">
+                        <img src="immagini/foto2.jpeg" alt="Referente Unico">
+                    </div>
+                </div>
+
+                <div class="slide-ragione">
+                    <div class="box-testo-ragione">
+                        <p class="titolo-ragione">Da zero alle chiavi in mano</p>
+                        <p class="descrizione-ragione">La nostra rete ci permette di prendere in carico una casa da demolire e consegnartela pronta da abitare. Progettazione, pratiche, impianti e finiture: un flusso di lavoro testato in decenni di attività per garantirti tempi certi e zero brutte sorprese sul preventivo.</p>
+                    </div>
+                    <div class="box-foto-ragione">
+                        <img src="immagini/foto3.jpeg" alt="Chiavi in mano">
+                    </div>
+                </div>
+
+                <div class="slide-ragione">
+                    <div class="box-testo-ragione">
+                        <p class="titolo-ragione">Garanzie e Sicurezza</p>
+                        <p class="descrizione-ragione">Garantiamo la massima sicurezza in ogni fase del cantiere e un'assistenza continua. Siamo sempre al tuo fianco per qualsiasi evenienza, assicurandoti disponibilità assoluta e interventi tempestivi anche a lavori ultimati. La tua tranquillità è la nostra priorità.</p>
+                    </div>
+                    <div class="box-foto-ragione">
+                        <img src="immagini/foto3.jpeg" alt="Garanzia">
+                    </div>
+                </div>
+
+                <div class="controlli-slider">
+                    <button class="freccia-elegante sx" onclick="cambiaRagione(-1)">
+                        <img src="immagini/drill_indietro.png" alt="Indietro" class="icona-trapano">
+                    </button>
+                    
+                    <div class="indicatori-slider">
+                        <span class="punto-slider attivo" onclick="vaiARagione(0)"></span>
+                        <span class="punto-slider" onclick="vaiARagione(1)"></span>
+                        <span class="punto-slider" onclick="vaiARagione(2)"></span>
+                        <span class="punto-slider" onclick="vaiARagione(3)"></span>
+                    </div>
+                    
+                    <button class="freccia-elegante dx" onclick="cambiaRagione(1)">
+                        <img src="immagini/drill.png" alt="Avanti" class="icona-trapano">
+                    </button>
+                </div>
+                
             </div>
         </div>
 
