@@ -85,21 +85,19 @@ body{
 
 /* IL NUOVO MENU ELEGANTE */
 .bottone_menu {
-    background-color: transparent; /* Rimuove lo sfondo della capsula */
+    background-color: transparent; 
     color: rgba(245, 245, 220, 1);
-    font-size: 20px; /* Leggermente più grande per compensare la mancanza di sfondo */
-    
-    /* Il trucco della riga dorata */
+    font-size: 20px; 
     border-bottom: 2px solid rgba(225, 173, 1, 1);
-    padding-bottom: 5px; /* Spinge la riga dorata un pochino sotto il testo */
-    
+    padding-bottom: 5px; 
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    
-    /* Transizione dolce per l'hover */
     transition: transform 0.3s ease, color 0.3s ease;
+    
+    /* AGGIUNGI QUESTA RIGA PER NON FARLI SOTTOLINEARE DI BLU DAL BROWSER */
+    text-decoration: none; 
 }
 
 /* L'ANIMAZIONE HOVER DEDICATA SOLO AL MENU */
@@ -831,4 +829,154 @@ animazioni per il trapano
     .chiama { width: 100%; padding: 15px 0; font-size: 20px; box-sizing: border-box; }
     
     .promo-box { width: calc(100% - 40px) !important; bottom: 20px !important; right: 20px !important; left: 20px !important; box-sizing: border-box; }
+}
+
+
+
+
+/* =========================================
+   PAGINA: CHI SIAMO (Design Figma)
+========================================= */
+.pagina-chi-siamo {
+    padding-top: 180px; 
+    padding-bottom: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 150px; /* Molto respiro tra le sezioni */
+    overflow-x: hidden; 
+}
+
+.titolo-chi-siamo {
+    color: rgba(245, 245, 220, 1);
+    font-size: 80px;
+    margin-left: 10%; /* Lo allinea bene con le foto */
+    margin-bottom: 0;
+}
+
+.blocco-alternato {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Questa classe inverte l'ordine: Testo a sinistra, Foto a destra */
+.blocco-alternato.inverso {
+    flex-direction: row-reverse;
+}
+
+.box-testo-chi-siamo {
+    background-color: rgba(194, 178, 128, 1);
+    color: rgba(9, 20, 42, 1);
+    padding: 60px 80px;
+    width: 55%; /* In Figma non prende mezzo schermo, è più slanciato */
+    max-width: 800px;
+    font-size: 22px;
+    line-height: 1.6;
+    font-weight: bold;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* I BORDI CORRETTI PER FARLI COMBACIARE AI LATI */
+/* Il primo testo è a DESTRA, quindi è piatto a destra e rotondo a sinistra */
+.raggio-sinistra { 
+    border-radius: 40px 0 0 40px; 
+    margin-right: -10px; /* Lo fa incollare al bordo destro dello schermo */
+} 
+/* Il secondo testo è a SINISTRA, quindi piatto a sinistra e rotondo a destra */
+.raggio-destra { 
+    border-radius: 0 40px 40px 0; 
+    margin-left: -10px; /* Lo fa incollare al bordo sinistro */
+}
+/* Il terzo testo è al centro, rotondo ovunque */
+.raggio-tutto { 
+    border-radius: 40px; 
+    width: 65%; 
+    margin: 0 auto; 
+    text-align: center; 
+}
+
+/* Animazione al passaggio del mouse sul testo */
+.box-testo-chi-siamo:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+/* FOTOGRAFIE E OMBRE SOLIDE */
+.contenitore-foto-ombra {
+    width: 30%; /* Più piccole e chic rispetto a prima */
+    max-width: 450px;
+    position: relative;
+    margin: 0 8%; /* Le stacca dai bordi */
+}
+
+.foto-chi-siamo {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    position: relative;
+    z-index: 2; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    transition: transform 0.5s ease;
+}
+
+.ombra-foto {
+    position: absolute;
+    background-color: rgba(194, 178, 128, 0.7); 
+    width: 100%;
+    height: 100%;
+    z-index: 1; 
+    transition: transform 0.5s ease;
+}
+
+/* Spostamento delle ombre in base al blocco */
+.ombra-destra { top: 30px; left: 30px; }
+.ombra-sinistra { top: 30px; right: 30px; }
+
+/* L'ANIMAZIONE 3D DELLA FOTO */
+.contenitore-foto-ombra:hover .foto-chi-siamo {
+    transform: translate(-15px, -15px) scale(1.05); 
+}
+.contenitore-foto-ombra:hover .ombra-foto {
+    transform: translate(15px, 15px); 
+}
+
+
+/* =========================================================
+   REGOLE SOLO PER SMARTPHONE E TABLET (Chi Siamo)
+========================================================= */
+@media (max-width: 768px) {
+    
+    .pagina-chi-siamo { 
+        gap: 80px; 
+        padding-bottom: 80px; 
+        padding-top: 150px;
+    }
+    
+    .titolo-chi-siamo { 
+        font-size: 50px !important; 
+        margin-left: 0; 
+        text-align: center; 
+    }
+    
+    /* Su telefono non c'è destra o sinistra: si impila in verticale! */
+    .blocco-alternato, .blocco-alternato.inverso { 
+        flex-direction: column !important; 
+        padding: 0 20px; 
+        gap: 50px;
+    }
+    
+    /* Arrotondiamo tutti i lati perché non tocca più i bordi */
+    .box-testo-chi-siamo, .raggio-sinistra, .raggio-destra, .raggio-tutto { 
+        width: 100%; 
+        border-radius: 30px !important; 
+        padding: 30px 20px; 
+        font-size: 18px; 
+        text-align: center;
+        margin: 0; /* Togliamo i margini negativi */
+    }
+    
+    .contenitore-foto-ombra { 
+        width: 85%; 
+        margin: 0 auto; 
+    }
 }
