@@ -119,3 +119,25 @@ if (bottoneChiudiPromo) {
         scatolaPromo.style.display = 'none'; 
     });
 }
+// ==========================================
+// 6. MENU HAMBURGER PER MOBILE
+// ==========================================
+const hamburger = document.getElementById('hamburger');
+const menuPrincipale = document.getElementById('menu-principale');
+
+if (hamburger) {
+    hamburger.addEventListener('click', () => {
+        // Aggiunge e toglie le classi per animare la X e aprire il menu
+        hamburger.classList.toggle('attivo');
+        menuPrincipale.classList.toggle('aperto');
+    });
+
+    // Chicca extra: se clicchi un bottone del menu, il menu si chiude da solo!
+    const bottoniMenu = document.querySelectorAll('.bottone_menu');
+    bottoniMenu.forEach(bottone => {
+        bottone.addEventListener('click', () => {
+            hamburger.classList.remove('attivo');
+            menuPrincipale.classList.remove('aperto');
+        });
+    });
+}

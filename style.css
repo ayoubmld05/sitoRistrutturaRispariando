@@ -61,9 +61,26 @@ body{
     padding-top: 150px; 
 }
 
-.menu{
+
+.menu {
     display: flex;
     gap: 30px;
+}
+
+/* STILE HAMBURGER BASE (Nascosto su PC) */
+.hamburger {
+    display: none; 
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    z-index: 2000; /* Deve stare sopra al menu quando si apre */
+}
+
+.hamburger span {
+    width: 35px;
+    height: 3px;
+    background-color: rgba(225, 173, 1, 1); /* Colore oro */
+    transition: all 0.3s ease;
 }
 
 /* IL NUOVO MENU ELEGANTE */
@@ -755,16 +772,45 @@ animazioni per il trapano
     }
 
     /* NAVBAR */
-    .testata {
-        flex-direction: column;
-        gap: 20px;
-        margin-bottom: 30px;
+    .testata { 
+        flex-direction: row !important; /* Logo a sinistra, Hamburger a destra */
+        justify-content: space-between; 
+        padding: 10px 20px; 
+        height: 80px; /* Fissiamo l'altezza */
+    }
+    .logo { width: 120px; } /* Rimpiccioliamo un po' il logo */
+
+    /* 2. HAMBURGER VISIBILE E ANIMATO */
+    .hamburger { display: flex; }
+    
+    /* Animazione: Le 3 linee diventano una X quando ha la classe .attivo */
+    .hamburger.attivo span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+    .hamburger.attivo span:nth-child(2) { opacity: 0; }
+    .hamburger.attivo span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+
+    /* 3. IL MENU A SCOMPARSA LATERALE */
+    .menu { 
+        position: fixed;
+        top: 0;
+        right: -100%; /* Totalmente nascosto fuori dallo schermo a destra! */
+        width: 70%; /* Occupa il 70% dello schermo */
+        height: 100vh; /* Alto fino in fondo */
+        background-color: rgba(9, 20, 42, 0.98);
+        flex-direction: column !important;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        transition: right 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        box-shadow: -10px 0 20px rgba(0,0,0,0.5);
     }
     
-    .menu {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
+    /* Quando il JS aggiunge la classe .aperto, il menu entra nello schermo */
+    .menu.aperto { right: 0; }
+    
+    /* 4. FIX DEL TESTO GIGANTE "ALCUNI DEI NOSTRI LAVORI" */
+    .testo-lavori {
+        font-size: 35px !important; /* Molto più proporzionato */
+        text-align: center;
     }
 
     /* PRIMO BLOCCO */
