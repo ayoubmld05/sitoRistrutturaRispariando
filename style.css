@@ -979,4 +979,175 @@ animazioni per il trapano
         width: 85%; 
         margin: 0 auto; 
     }
+
+    /*parte della pagina "I notri lavori"*/
+    /* CSS MOBILE PER PAGINA LAVORI */
+    .intro-lavori { padding: 0 20px; text-align: center; }
+    .titolo-lavori { font-size: 50px !important; margin-left: 0; }
+    .descrizione-lavori { font-size: 18px; }
+    .lista-progetti { gap: 100px; }
+    .blocco-progetto { padding: 0 20px; }
+    .riga-metro-animata { width: 80%; } /* Il metro prende quasi tutto lo schermo su telefono */
+    
+    .contenuto-progetto { flex-direction: column; gap: 40px; }
+    .titolo-progetto { width: 100%; text-align: center; }
+    
+    .foto-sovrapposte { width: 100%; height: 300px; }
+    .foto-principale { height: 220px; }
+    .foto-secondaria { height: 150px; }
 }
+
+
+
+/* =========================================
+   PAGINA: I NOSTRI LAVORI
+========================================= */
+.pagina-lavori {
+    padding-top: 180px; 
+    padding-bottom: 100px;
+    overflow-x: hidden;
+}
+
+.intro-lavori {
+    padding: 0 10%;
+    margin-bottom: 100px;
+}
+
+.titolo-lavori {
+    color: rgba(245, 245, 220, 1);
+    font-size: 80px;
+    margin: 0 0 30px 0;
+}
+
+.descrizione-lavori {
+    color: rgba(245, 245, 220, 1);
+    font-size: 24px;
+    line-height: 1.6;
+    max-width: 800px;
+}
+
+/* I BLOCCHI DEI PROGETTI */
+.lista-progetti {
+    display: flex;
+    flex-direction: column;
+    gap: 150px; /* Spazio abbondante tra un progetto e l'altro */
+}
+
+.blocco-progetto {
+    padding: 0 10%;
+}
+
+
+/* I SOTTOTITOLI PICCOLI SOTTO I PROGETTI */
+.sottotitolo-progetto {
+    color: rgba(245, 245, 220, 0.8); /* Un bianco-beige leggermente opaco per non confondersi col titolo */
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.5;
+    margin-top: 15px; /* Lo distanzia dal titolo grande */
+}
+/* IL CONTENITORE GENERALE */
+.riga-metro-animata {
+    width: 100%; /* Su PC prende il 40% o 100% come avevi impostato */
+    margin-bottom: 40px;
+}
+
+/* IL TUO NUOVO CONTENITORE PADRE */
+.gruppo-nastro-icona {
+    display: flex;
+    align-items: center; /* Questo li centra automaticamente l'uno con l'altro */
+    width: 100%;
+}
+
+/* IL NASTRO GIALLO (Con i segmenti più lunghi) */
+.nastro-giallo {
+    height: 2px; 
+    background-color: rgba(254, 198, 34, 1);
+    width: 0%; 
+    z-index: 1; 
+    
+    border-top: 1.5px solid rgba(9, 20, 42, 1);
+    border-bottom: 1.5px solid rgba(9, 20, 42, 1);
+    
+    /* LA MAGIA DELLE TACCHETTE PIÙ LUNGHE */
+    background-image: repeating-linear-gradient(
+        to right,
+        transparent,
+        transparent 40px, /* Spazio giallo molto più lungo (prima era 15px) */
+        rgba(9, 20, 42, 1) 40px, /* Inizia la tacca scura a 40px */
+        rgba(9, 20, 42, 1) 42px  /* La tacca finisce a 42px (spessore 2px) */
+    );
+    
+    /* La tua leva per allinearlo su e giù (lascia il numero che avevi trovato perfetto!) */
+    transform: translateY(12px); 
+}
+/* L'ICONA DEL METRO */
+.icona-metro {
+    height: 80px; 
+    width: auto;
+    z-index: 2; /* L'icona sta SOPRA, fa da "tappo" alla giuntura */
+    
+    /* IL TRUCCO PER NASCONDERE LA CICATRICE */
+    /* Aumentando il valore negativo, l'icona si sposta a sinistra.
+       Devi aumentare questo numero (es. -25px, -30px, -35px) finché 
+       la giuntura cerchiata in bianco non finisce letteralmente 
+       SOTTO la plastica tonda del metro! */
+    margin-left: -25px; 
+}
+
+/* IL LAYOUT DEL PROGETTO (Testo a SX, Foto a DX) */
+.contenuto-progetto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titolo-progetto {
+    color: rgba(245, 245, 220, 1);
+    font-size: 30px;
+    font-weight: bold;
+    width: 30%;
+    line-height: 1.4;
+}
+
+/* LE FOTO SOVRAPPOSTE AD EFFETTO 3D */
+.foto-sovrapposte {
+    position: relative;
+    width: 60%;
+    height: 400px; /* Altezza fissa per fare da tela alle due foto */
+}
+
+/* La foto grande dietro */
+.foto-principale {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80%;
+    height: 300px;
+    object-fit: cover;
+    border: 10px solid rgba(9, 20, 42, 1); /* Bordo invisibile che taglia la foto davanti! */
+    z-index: 1;
+    transition: transform 0.5s ease;
+}
+
+/* La foto piccola davanti */
+.foto-secondaria {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 200px;
+    object-fit: cover;
+    border: 10px solid rgba(9, 20, 42, 1);
+    z-index: 2;
+    transition: transform 0.5s ease;
+}
+
+/* ANIMAZIONE MOZZAFIATO QUANDO PASSI IL MOUSE */
+.foto-sovrapposte:hover .foto-principale {
+    transform: translate(15px, -15px); /* Si sposta in alto a destra */
+}
+.foto-sovrapposte:hover .foto-secondaria {
+    transform: translate(-15px, 15px); /* Si sposta in basso a sinistra (si separano!) */
+}
+

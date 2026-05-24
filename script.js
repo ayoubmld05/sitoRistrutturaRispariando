@@ -141,3 +141,27 @@ if (hamburger) {
         });
     });
 }
+// ==========================================
+// 7. IL MOTORE DEL METRO ANIMATO (Effetto Scala)
+// ==========================================
+const righeMetro = document.querySelectorAll('.riga-metro-animata');
+
+if (righeMetro.length > 0) {
+    window.addEventListener('scroll', () => {
+        const altezzaSchermo = window.innerHeight;
+
+        righeMetro.forEach(riga => {
+            const posizioneRiga = riga.getBoundingClientRect().top;
+            
+            let percentuale = (altezzaSchermo - posizioneRiga) / (altezzaSchermo * 0.4);
+            
+            if (percentuale < 0) percentuale = 0;
+            if (percentuale > 1) percentage = 1;
+            
+            const lunghezzaMassima = parseInt(riga.getAttribute('data-max')) || 100;
+            
+            const nastro = riga.querySelector('.nastro-giallo');
+            nastro.style.width = (percentuale * lunghezzaMassima) + '%';
+        });
+    });
+}
