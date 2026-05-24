@@ -108,17 +108,7 @@ if(tutteLeFoto.length > 0) {
     });
 }
 
-// ==========================================
-// 5. CATTURIAMO IL POPUP E LA X
-// ==========================================
-const scatolaPromo = document.getElementById('promo-fluttuante');
-const bottoneChiudiPromo = document.getElementById('chiudi-promo');
 
-if (bottoneChiudiPromo) {
-    bottoneChiudiPromo.addEventListener('click', () => {
-        scatolaPromo.style.display = 'none'; 
-    });
-}
 // ==========================================
 // 6. MENU HAMBURGER PER MOBILE
 // ==========================================
@@ -163,5 +153,22 @@ if (righeMetro.length > 0) {
             const nastro = riga.querySelector('.nastro-giallo');
             nastro.style.width = (percentuale * lunghezzaMassima) + '%';
         });
+    });
+}
+
+
+// ==========================================
+// 5. CATTURIAMO IL POPUP E LA X
+// ==========================================
+const scatolaPromo = document.getElementById('promo-fluttuante');
+const bottoneChiudiPromo = document.getElementById('chiudi-promo');
+
+if (bottoneChiudiPromo && scatolaPromo) {
+    bottoneChiudiPromo.addEventListener('click', (event) => {
+        // QUESTA RIGA È VITALE: Impedisce al click di "passare attraverso" la X 
+        // e far partire la chiamata telefonica del contenitore padre!
+        event.stopPropagation(); 
+        
+        scatolaPromo.style.display = 'none'; 
     });
 }

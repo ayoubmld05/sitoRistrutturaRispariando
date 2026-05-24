@@ -26,10 +26,10 @@
             </div>
             
             <div class="menu" id="menu-principale">       
-                <a href="index.html#sezione-lavori" class="bottone_menu">Home</a>                  
+                <a href="index.html" class="bottone_menu">Home</a>                  
                 <a href="chi_siamo.html" class="bottone_menu">Chi Siamo</a>  
                 <a href="i_nostri_lavori.html" class="bottone_menu">I nostri lavori</a>           
-                <a href="#footer-contatti" class="bottone_menu">Contattaci</a>
+                <a href="contattaci.html" class="bottone_menu">Contattaci</a>
             </div>
         </header>
 
@@ -40,10 +40,13 @@
                 per far <span class="testo-evidenziato">crescere</span> il<br class="a-capo-pc">
                 <span class="testo-evidenziato">valore</span> del tuo <span class="testo-evidenziato">futuro</span>.
             </h1>
-            <div class="riceviPreventivoGratuito nascosto-basso ritardo-1">
+          
+
+
+            <a href="tel:+39123456789" class="riceviPreventivoGratuito nascosto-basso ritardo-1">
                 Ricevi un preventivo <br>
                 <span class="testo-evidenziato">gratuito</span>
-            </div>
+            </a>
         </div> <!-- ECCO IL DIV CHE MANCAVA! -->
 
         <div class="secondoBlocco">
@@ -165,11 +168,12 @@
                 <div class="contenitoreGenitoreLoghi">
                     <div class="contenitoreLoghi"><img src="immagini/instagram-2.png" class="logo-social"></div>
                     <div class="contenitoreLoghi"><img src="immagini/facebook-app-symbol.png" class="logo-social"></div>
-                    <div class="contenitoreLoghi"><img src="immagini/whatsapp.png" class="logo-social"></div>
-                </div>  
+                    <a href="https://wa.me/39123456789" target="_blank" class="contenitoreLoghi">
+                        <img src="immagini/whatsapp.png" class="logo-social">
+                    </a>                </div>  
             </div>
             <div class="footer-destra">
-                <div class="chiama">Chiamaci</div>
+                <a href="tel:+39123456789" class="chiama">Chiamaci</a>
             </div>
         </div>
 
@@ -180,7 +184,7 @@
             <div class="freccia dx" id="freccia-dx">&#10095;</div>
         </div>
         
-        <div id="promo-fluttuante" class="promo-box">
+        <div id="promo-fluttuante" class="promo-box" onclick="window.location.href='tel:+39123456789'">
             <span class="chiudi-promo" id="chiudi-promo">&times;</span>
             <p class="titolo-promo">🎁 Sconto del 10%!</p>
             <p class="testo-promo">Prenota il tuo PRIMO sopralluogo gratuito per bloccare l'offerta.</p>

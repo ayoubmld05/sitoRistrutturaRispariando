@@ -1094,6 +1094,16 @@ animazioni per il trapano
         color: rgba(9, 20, 42, 1) !important;
         box-shadow: 0 10px 20px rgba(0,0,0,0.3) !important; /* Ombretta per farlo sollevare */
     }
+    /* CSS MOBILE PER PAGINA CONTATTACI */
+    .pagina-contatti { padding-top: 150px; padding-bottom: 80px; padding-left: 20px; padding-right: 20px; }
+    .titolo-contatti { font-size: 55px !important; text-align: center; margin-bottom: 60px; }
+    
+    .contenitore-contatti { flex-direction: column; gap: 80px; }
+    
+    .info-contatti { align-items: flex-start; margin: 0 auto; }
+    .testo-contatto { font-size: 20px; }
+    
+    .bottone-preventivo-gigante { padding: 40px 30px; font-size: 24px; width: 100%; box-sizing: border-box; }
 }
 
 
@@ -1262,3 +1272,100 @@ animazioni per il trapano
     height: 400px; 
 }
 
+
+
+/* =========================================
+   PAGINA: CONTATTACI
+========================================= */
+.pagina-contatti {
+    padding-top: 200px;
+    padding-bottom: 150px;
+    padding-left: 10%;
+    padding-right: 10%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.titolo-contatti {
+    color: rgba(245, 245, 220, 1);
+    font-size: 80px;
+    margin-top: 0;
+    margin-bottom: 80px;
+}
+
+.contenitore-contatti {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* LA COLONNA DI SINISTRA (I Recapiti) */
+.info-contatti {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.riga-contatto {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    cursor: pointer;
+    /* L'animazione magnetica */
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.icona-contatto {
+    width: 40px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.testo-contatto {
+    color: rgba(245, 245, 220, 1);
+    font-size: 24px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+/* L'EFFETTO HOVER SUI CONTATTI: Scivolano a destra e l'icona salta */
+.riga-contatto:hover {
+    transform: translateX(20px);
+}
+.riga-contatto:hover .icona-contatto {
+    transform: scale(1.2) rotate(5deg);
+}
+
+/* LA COLONNA DI DESTRA (Il Bottone) */
+.bottone-preventivo-gigante {
+    background-color: rgba(9, 36, 94, 1); /* Il blu scuro del footer */
+    color: rgba(245, 245, 220, 1);
+    border-radius: 40px;
+    padding: 50px 70px;
+    font-size: 30px;
+    line-height: 1.5;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    /* L'animazione di sollevamento */
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+}
+
+.bottone-preventivo-gigante:hover {
+    transform: translateY(-15px) scale(1.05); /* Si solleva tanto e si allarga */
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7); /* L'ombra diventa profonda */
+}
+
+
+/* RIMUOVE LA SOTTOLINEATURA DAI BOTTONI TRASFORMATI IN LINK */
+.riceviPreventivoGratuito,
+.chiama,
+.riga-contatto,
+.bottone-preventivo-gigante {
+    text-decoration: none !important;
+}
+
+/* Fa capire all'utente che il box promo è cliccabile */
+.promo-box {
+    cursor: pointer;
+}
