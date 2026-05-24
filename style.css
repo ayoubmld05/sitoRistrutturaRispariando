@@ -1033,6 +1033,67 @@ animazioni per il trapano
     /* Sistemazione delle foto che si accavallavano male */
     .foto-principale { height: 200px; width: 85%; border-width: 5px; }
     .foto-secondaria { height: 140px; width: 65%; border-width: 5px; }
+
+
+    /* =========================================
+       FIX: L'ULTIMO BLOCCO DI "CHI SIAMO"
+    ========================================= */
+    .blocco-centrale {
+        padding: 0 20px !important; /* Diamo respiro ai lati! */
+    }
+    
+    .box-testo-chi-siamo { 
+        width: 100% !important; 
+        box-sizing: border-box !important; /* IMPEDISCE di uscire dallo schermo! */
+        border-radius: 30px !important; 
+        padding: 30px 20px !important; 
+        font-size: 18px !important; 
+        text-align: center !important;
+        margin: 0 !important; 
+    }
+
+
+    /* =========================================
+       RESTYLING DEL FOOTER (Solo per Telefono)
+    ========================================= */
+    .footer {
+        padding: 60px 20px !important;
+        gap: 30px !important;
+    }
+
+    /* 1. Testo più elegante e leggibile */
+    .testoFinale {
+        font-size: 17px !important;
+        line-height: 1.5 !important;
+        font-weight: normal !important;
+    }
+
+    /* 2. Icone Social proporzionate */
+    .contenitoreGenitoreLoghi {
+        justify-content: center !important; /* Le centriamo bene */
+        gap: 20px !important;
+    }
+
+    .contenitoreLoghi {
+        width: 50px !important; /* Rimpicciolite da 70px a 50px */
+        height: 50px !important;
+    }
+
+    .logo-social {
+        width: 25px !important; /* Logo rimpicciolito in proporzione */
+    }
+
+    /* 3. Il bottone "Chiamaci": da brutto a bellissimo */
+    .chiama {
+        width: auto !important; /* Toglie quell'orrendo effetto "largo tutto lo schermo" */
+        padding: 15px 50px !important; /* Forma a pillola perfetta */
+        font-size: 18px !important;
+        
+        /* Lo facciamo ORO in modo che "spacchi" sul blu scuro del footer! */
+        background-color: rgba(225, 173, 1, 1) !important; 
+        color: rgba(9, 20, 42, 1) !important;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.3) !important; /* Ombretta per farlo sollevare */
+    }
 }
 
 
