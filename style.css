@@ -1104,6 +1104,29 @@ animazioni per il trapano
     .testo-contatto { font-size: 20px; }
     
     .bottone-preventivo-gigante { padding: 40px 30px; font-size: 24px; width: 100%; box-sizing: border-box; }
+
+
+    /* SISTEMAZIONE BOTTONE PREVENTIVO SU MOBILE */
+    .bottone-preventivo-gigante { 
+        width: auto !important; /* Non prende più tutto lo schermo */
+        display: inline-block !important; /* Si stringe intorno al testo */
+        margin: 0 auto !important; /* Lo centra nella sua sezione */
+        padding: 15px 40px !important; /* Sgonfiato! Stessa altezza del tasto Chiamaci */
+        font-size: 18px !important; /* Testo molto più piccolo e chic */
+        line-height: 1.3 !important;
+        border-radius: 40px !important; /* Forma a pillola perfetta */
+        
+        /* Facciamo anche questo ORO per farlo abbinare al footer 
+           e alle icone dei contatti sopra di lui? Se preferisci lasciarlo 
+           blu, cancella le due righe qui sotto! */
+        background-color: rgba(225, 173, 1, 1) !important; 
+        color: rgba(9, 20, 42, 1) !important;
+    }
+    .box-preventivo {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important; /* Centra la pillola nello schermo */
+    }
 }
 
 
