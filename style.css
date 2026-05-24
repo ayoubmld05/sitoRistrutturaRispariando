@@ -1104,6 +1104,97 @@ animazioni per il trapano
     .testo-contatto { font-size: 20px; }
     
     .bottone-preventivo-gigante { padding: 40px 30px; font-size: 24px; width: 100%; box-sizing: border-box; }
+
+
+
+    /* =========================================
+       FIX DEFINITIVI PER IL TELEFONO (Tutte le pagine)
+    ========================================= */
+    
+    /* 1. FIX PAGINA CONTATTACI */
+    .pagina-contatti {
+        padding-top: 130px !important; 
+        padding-bottom: 60px !important; 
+        padding-left: 20px !important; 
+        padding-right: 20px !important;
+    }
+    .titolo-contatti { 
+        font-size: 45px !important; 
+        text-align: center !important; 
+        margin-bottom: 40px !important; 
+        line-height: 1.1 !important;
+    }
+    .contenitore-contatti { 
+        flex-direction: column !important; 
+        gap: 50px !important; 
+    }
+    .info-contatti { 
+        width: 100% !important; 
+        align-items: center !important; /* Centra le icone */
+    }
+    .riga-contatto { 
+        justify-content: center !important; 
+        gap: 15px !important; 
+        width: 100% !important;
+    }
+    .icona-contatto { 
+        width: 30px !important; /* Icone più proporzionate */
+    }
+    .testo-contatto { 
+        font-size: 18px !important; 
+        word-break: break-word !important; /* SALVA-SCHERMO: Manda a capo l'email se è troppo lunga! */
+    }
+    .bottone-preventivo-gigante { 
+        width: 100% !important; 
+        box-sizing: border-box !important; 
+        padding: 30px 20px !important; /* Sgonfiamo il bottone */
+        font-size: 22px !important; 
+        border-radius: 30px !important; 
+    }
+
+    /* 2. FIX ULTIMO BLOCCO CHI SIAMO */
+    .blocco-centrale {
+        padding: 0 20px !important; 
+    }
+    .box-testo-chi-siamo { 
+        width: 100% !important; 
+        box-sizing: border-box !important; /* Impedisce di uscire dallo schermo */
+        border-radius: 30px !important; 
+        padding: 30px 20px !important; 
+        font-size: 18px !important; 
+        text-align: center !important;
+        margin: 0 !important; 
+    }
+
+    /* 3. FIX FOOTER GIGANTE */
+    .footer {
+        padding: 60px 20px !important;
+        gap: 30px !important;
+    }
+    .testoFinale {
+        font-size: 17px !important;
+        line-height: 1.5 !important;
+        font-weight: normal !important;
+    }
+    .contenitoreGenitoreLoghi {
+        justify-content: center !important; 
+        gap: 20px !important;
+    }
+    .contenitoreLoghi {
+        width: 50px !important; /* Rimpiccioliamo le capsule social */
+        height: 50px !important;
+    }
+    .logo-social {
+        width: 25px !important; 
+    }
+    .chiama {
+        width: auto !important; 
+        padding: 15px 50px !important; /* Da striscia larga a bellissima pillola */
+        font-size: 18px !important;
+        background-color: rgba(225, 173, 1, 1) !important; /* Lo facciamo ORO per farlo spiccare */
+        color: rgba(9, 20, 42, 1) !important;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.3) !important; 
+    }
 }
 
 
